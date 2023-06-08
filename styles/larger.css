@@ -17,7 +17,7 @@ h1{
 }
 
 main{
-    width: 90%;
+    width: 60%;
     margin: auto;
 }
 nav ul {
@@ -57,7 +57,7 @@ footer {
     color: white;
     background-color: darkblue;
     position: fixed;
-    bottom: 1px;
+    bottom: 0px;
     width: 100vw;
     padding: .5rem;
 }
