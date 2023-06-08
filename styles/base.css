@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital@0;1&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-align: center;
+    font-family:'lora', serif;
 }
 
 header {
@@ -10,7 +13,7 @@ header {
     display: flex;
     color: white;
     align-items: center;
-
+    
 }
 
 header img {
@@ -31,6 +34,7 @@ a {
 
 nav{
     background-color: black;
+    font-family: 'lora', serif;
 }
 
 nav ul {
@@ -57,11 +61,11 @@ nav li:hover {
 }
 
 .card {
+    
     border: 1px solid gray;
     margin: 1rem;
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
-
 }
 
 .card h3 {
@@ -82,7 +86,7 @@ nav li:hover {
 
 .card p {
     padding: .5rem;
-
+    
 }
 footer {
     color: white;
