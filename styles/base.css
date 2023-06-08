@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+header {
+    background-color: darkblue;
+    display: flex;
+    color: white;
+    align-items: center;
+
+}
+
+header img {
+    max-width: 35%;
+    margin: .75rem;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+
+}
+
+h1 {
+    margin: auto;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+nav{
+    background-color: black;
+}
+
+nav ul {
+    font-size: 1.25em;
+}
+
+
+nav li {
+    color: white;
+    text-decoration: none;
+    list-style: none;
+    padding: 5px;
+    margin: auto;
+    width: 100%;
+}
+
+nav li:hover {
+    background-color: brown;
+}
+
+.border {
+    padding: .5rem ;
+    border-bottom: 1px solid gray;
+}
+
+.card {
+    border: 1px solid gray;
+    margin: 1rem;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+
+}
+
+.card h3 {
+    background-color: darkblue;
+    color: white;
+    padding: 1rem;
+}
+
+.card ul{
+    list-style: none;
+    padding: .75rem;
+}
+
+.card li{
+    text-align: left;
+    padding: .1rem;
+}
+
+.card p {
+    padding: .5rem;
+
+}
+footer {
+    color: white;
+    background-color: darkblue;
+}
+
+#lastModified, .modify {
+    color: gold;
+}
