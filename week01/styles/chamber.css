@@ -7,6 +7,12 @@
     font-family: 'Cormorant garamond', serif;
     text-align: center;
 }
+
+main {
+    width: 70vw;
+    margin: auto;
+}
+
 p, li {
     font-size: 18px;
     font-weight: bold;
@@ -46,7 +52,7 @@ ul {
 }
 
 #wireframe img {
-    width: 80vw;
+    width: 70vw;
 }
 
 .teal {
