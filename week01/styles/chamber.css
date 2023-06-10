@@ -36,7 +36,6 @@ ul {
     width: 30vw;
     margin: auto;
     font-size: large;
-    color: white;
     font-weight: bold;
     padding: .25rem;
     border: 1px solid black
@@ -65,6 +64,7 @@ ul {
 
 .med-teal {
     background-color: #326D6E;
+    color: white;
 }
 
 .sienna {
@@ -73,4 +73,5 @@ ul {
 
 .umber {
     background-color: #6E4932;
+    color: white;
 }
