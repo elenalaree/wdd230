@@ -5,4 +5,57 @@
     margin: 0;
     padding: 0;
     font-family: 'Cormorant garamond', serif;
+    text-align: center;
+}
+p, li {
+    font-size: 18px;
+    font-weight: bold;
+
+}
+
+h2 {
+    text-decoration: underline;
+    font-weight: bolder;
+}
+
+#name, #purpose, #scenarios, #colors, #fonts, #wireframe {
+    padding: 1rem;
+}
+
+ul {
+    list-style: none;
+}
+
+#colors ul li{
+    width: 20vw;
+    margin: auto;
+    font-size: large;
+    color: white;
+    font-weight: bold;
+    padding: .25rem;
+    border: 1px solid black
+}
+
+#wireframe img {
+    width: 80vw;
+}
+
+.teal {
+    background-color: #00878A;
+}
+
+.light-teal {
+    background-color: #54A7A8;
+}
+
+.med-teal {
+    background-color: #326D6E;
+}
+
+.sienna {
+    background-color: #BA6530;
+}
+
+.umber {
+    background-color: #6E4932;
 }
