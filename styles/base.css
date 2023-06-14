@@ -27,7 +27,7 @@ h1 {
     margin: auto;
 }
 
-a {
+nav a {
     text-decoration: none;
     color: white;
 }
@@ -43,7 +43,6 @@ nav ul {
 
 
 nav li {
-    color: white;
     text-decoration: none;
     list-style: none;
     padding: 5px;
