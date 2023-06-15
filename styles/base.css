@@ -73,7 +73,7 @@ nav li {
 }
 
 .card {
-    background-color: white;
+    background-color: aliceblue;
     border: 1px solid gray;
     margin: 1rem;
     border-radius: 5px;
@@ -82,7 +82,7 @@ nav li {
 
 .card h3 {
     background-color: var(--forest);
-    color: white;
+    color: aliceblue;
     padding: 1rem;
 }
 
@@ -103,7 +103,7 @@ nav li {
 
 #lastModified,
 .modify {
-    color: gold;
+    color: rgb(173, 167, 130);
 }
 
 @media (max-width: 750px) {
@@ -169,7 +169,25 @@ nav li {
 }
 
 footer {
-    color: white;
+    color: aliceblue;
 }
 
+}
+
+@media screen and (prefers-color-scheme: dark) {
+    body {
+        background: hsla(173, 98%, 16%, 1);
+        background: linear-gradient(180deg, hsla(173, 98%, 16%, 1) 0%, rgb(0, 0, 0) 47%, hsla(173, 98%, 16%, 1) 100%);
+        background-attachment: fixed;
+        color: aliceblue
+    }
+    nav a {
+        color:aliceblue;
+    }
+
+    .card{
+        background-color: var(--feather);
+        color: black;
+    }
+    
 }
