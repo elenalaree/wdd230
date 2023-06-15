@@ -1,5 +1,9 @@
 @media (min-width: 750px) {
 
+#menu {
+    display: none;
+}
+
 header {
     justify-content: center;
     
@@ -31,6 +35,14 @@ nav li {
     display: inline;
 }
 
+nav li:hover {
+    background: rgb(255, 255, 255);
+    background: linear-gradient(315deg, rgba(255, 255, 255, 0) 18%, rgba(52,99,122,1) 50%, rgba(255, 255, 255, 0) 85%);
+}
+nav li a:hover {
+    color: white;
+}
+
 .card {
     font-size: 1.25em;
 }
@@ -55,7 +67,6 @@ nav li {
 
 footer {
     color: white;
-    background-color: darkblue;
     position: fixed;
     bottom: 0px;
     width: 100vw;

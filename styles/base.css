@@ -1,19 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital@0;1&display=swap');
 
+/* colors
+feather - 
+ */
+:root {
+    --feather: #4B8E85;
+    --marine: #286D7A;
+    --forest: #015249;
+    --midnight: #14222A;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-align: center;
-    font-family:'lora', serif;
+    font-family: 'Lora', serif;
+}
+
+body {
+    background: hsla(173, 98%, 16%, 1);
+    height: 100vh;
+    background: linear-gradient(180deg, hsla(173, 98%, 16%, 1) 0%, hsla(0, 0%, 100%, 1) 47%, hsla(173, 98%, 16%, 1) 100%);
+    background-attachment: fixed;
 }
 
 header {
-    background-color: darkblue;
+    /* background: hsla(0, 0%, 100%, 1);
+    background: linear-gradient(360deg, hsla(0, 0%, 100%, 1) 0%, hsla(173, 98%, 16%, 1) 100%); */
     display: flex;
-    color: white;
     align-items: center;
-    
+
 }
 
 header img {
@@ -29,12 +46,12 @@ h1 {
 
 nav a {
     text-decoration: none;
-    color: white;
+    color: var(--midnight);
 }
 
-nav{
-    background-color: black;
-    font-family: 'lora', serif;
+/* Not hamburger menu */
+nav {
+    font-family: 'Lora', serif;
 }
 
 nav ul {
@@ -50,17 +67,13 @@ nav li {
     width: 100%;
 }
 
-nav li:hover {
-    background-color: brown;
-}
-
 .border {
-    padding: .5rem ;
+    padding: .5rem;
     border-bottom: 1px solid gray;
 }
 
 .card {
-    
+    background-color: white;
     border: 1px solid gray;
     margin: 1rem;
     border-radius: 5px;
@@ -68,30 +81,95 @@ nav li:hover {
 }
 
 .card h3 {
-    background-color: darkblue;
+    background-color: var(--forest);
     color: white;
     padding: 1rem;
 }
 
-.card ul{
+.card ul {
     list-style: none;
     padding: .75rem;
 }
 
-.card li{
+.card li {
     text-align: left;
     padding: .1rem;
 }
 
 .card p {
     padding: .5rem;
-    
-}
-footer {
-    color: white;
-    background-color: darkblue;
+
 }
 
-#lastModified, .modify {
+#lastModified,
+.modify {
     color: gold;
+}
+
+@media (max-width: 750px) {
+    /* All hamburger menu things. */
+
+#menu {
+	font-size: 1.5rem;
+	border: 1px solid rgba(0,0,0,.3);
+	padding: 3px 7px 6px;
+    background-color: var(--forest);
+	color: #fff;
+    position: absolute;
+	top: 0;
+	right: 0;
+}
+
+#menu::before {
+	content: "☰";
+}
+
+#menu.open::before {
+	content: "X";
+}
+
+.navigation {
+	display: flex;
+	flex-direction: column;
+	list-style: none;
+	background-color: #4B8E85;
+	color: var(--forest);
+}
+.navigation li {
+	display: none;
+}
+.navigation li a {
+	display: block;
+	padding: 1rem;
+	text-align: center;
+	text-decoration: none;
+	color: black;
+}
+
+.navigation li a:hover {
+	background-color: #bbb;
+	color: #333;
+	font-weight: 700;
+}
+
+/* when the button is clicked - the open class is toggle (added/removed) and accounted for here */
+.open li {
+	display: block;
+	width: 100%;
+}
+.open li a {
+	display: block;
+}
+
+.active::before {
+	content: "📍 ";
+}
+.card{
+    margin-bottom: 2rem;
+}
+
+footer {
+    color: white;
+}
+
 }
