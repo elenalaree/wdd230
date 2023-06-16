@@ -1,0 +1,15 @@
+body {
+    background: hsla(173, 98%, 16%, 1);
+    background: linear-gradient(180deg, hsla(173, 98%, 16%, 1) 0%, rgb(0, 0, 0) 47%, hsla(173, 98%, 16%, 1) 100%);
+    background-attachment: fixed;
+    color: aliceblue
+}
+nav a {
+    color:aliceblue;
+}
+
+.card{
+    background-color:var(--feather); 
+    color: aliceblue;
+
+}

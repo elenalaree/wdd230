@@ -1,13 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital@0;1&display=swap');
 
-/* colors
-feather - 
- */
+
 :root {
-    --feather: #4B8E85;
+    --feather: #016255;
     --marine: #286D7A;
     --forest: #015249;
     --midnight: #14222A;
+    --backMain: white;
 }
 
 * {
@@ -18,6 +17,7 @@ feather -
     font-family: 'Lora', serif;
 }
 
+
 body {
     background: hsla(173, 98%, 16%, 1);
     height: 100vh;
@@ -25,9 +25,73 @@ body {
     background-attachment: fixed;
 }
 
+/* switch things */
+/* The switch - the box around the slider */
+.switch {
+    position: absolute;
+    top:4px;
+    right: 50px;
+    width: 60px;
+    height: 30px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 2px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+
+input:checked+.slider {
+    background-color: var(--marine);
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px var(--marine);
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(25px);
+    -ms-transform: translateX(25px);
+    transform: translateX(25px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
 header {
-    /* background: hsla(0, 0%, 100%, 1);
-    background: linear-gradient(360deg, hsla(0, 0%, 100%, 1) 0%, hsla(173, 98%, 16%, 1) 100%); */
     display: flex;
     align-items: center;
 
@@ -74,16 +138,22 @@ nav li {
 
 .card {
     background-color: aliceblue;
-    border: 1px solid gray;
+    border: 1px solid black;
     margin: 1rem;
-    border-radius: 5px;
+    border-radius: 7px;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
 .card h3 {
-    background-color: var(--forest);
+    background-color: var(--marine);
     color: aliceblue;
     padding: 1rem;
+    border-radius: 6px 6px 0 0;
+    border-bottom: 1px solid var(--midnight)
+}
+
+.card a {
+    color: black;
 }
 
 .card ul {
@@ -103,91 +173,84 @@ nav li {
 
 #lastModified,
 .modify {
-    color: rgb(173, 167, 130);
+    color: rgb(244, 241, 216);
 }
 
 @media (max-width: 750px) {
+    h1 {
+        margin: auto;
+        font-size: 1.6em;
+    }
+
     /* All hamburger menu things. */
 
-#menu {
-	font-size: 1.5rem;
-	border: 1px solid rgba(0,0,0,.3);
-	padding: 3px 7px 6px;
-    background-color: var(--forest);
-	color: #fff;
-    position: absolute;
-	top: 0;
-	right: 0;
-}
-
-#menu::before {
-	content: "☰";
-}
-
-#menu.open::before {
-	content: "X";
-}
-
-.navigation {
-	display: flex;
-	flex-direction: column;
-	list-style: none;
-	background-color: #4B8E85;
-	color: var(--forest);
-}
-.navigation li {
-	display: none;
-}
-.navigation li a {
-	display: block;
-	padding: 1rem;
-	text-align: center;
-	text-decoration: none;
-	color: black;
-}
-
-.navigation li a:hover {
-	background-color: #bbb;
-	color: #333;
-	font-weight: 700;
-}
-
-/* when the button is clicked - the open class is toggle (added/removed) and accounted for here */
-.open li {
-	display: block;
-	width: 100%;
-}
-.open li a {
-	display: block;
-}
-
-.active::before {
-	content: "📍 ";
-}
-.card{
-    margin-bottom: 2rem;
-}
-
-footer {
-    color: aliceblue;
-}
-
-}
-
-@media screen and (prefers-color-scheme: dark) {
-    body {
-        background: hsla(173, 98%, 16%, 1);
-        background: linear-gradient(180deg, hsla(173, 98%, 16%, 1) 0%, rgb(0, 0, 0) 47%, hsla(173, 98%, 16%, 1) 100%);
-        background-attachment: fixed;
-        color: aliceblue
-    }
-    nav a {
-        color:aliceblue;
+    #menu {
+        font-size: 1.5rem;
+        border: 1px solid rgba(0, 0, 0, .3);
+        padding: 3px 7px 6px;
+        background-color: var(--forest);
+        color: #fff;
+        position: absolute;
+        top: 0;
+        right: 0;
     }
 
-    .card{
+    #menu::before {
+        content: "☰";
+    }
+
+    #menu.open::before {
+        content: "X";
+    }
+
+    .navigation {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
         background-color: var(--feather);
-        color: black;
+        color: var(--forest);
     }
-    
+
+    .navigation li {
+        display: none;
+    }
+
+    .navigation li a {
+        display: block;
+        padding: 1rem;
+        text-align: center;
+        text-decoration: none;
+        color: black;
+        border:1px solid var(--forest)
+    }
+
+    .navigation li a:hover {
+        background-color: #bbb;
+        color: #333;
+        font-weight: 700;
+    }
+
+    /* when the button is clicked - the open class is toggle (added/removed) and accounted for here */
+    .open li {
+        display: block;
+        width: 100%;
+    }
+
+    .open li a {
+        display: block;
+    }
+
+    .active::before {
+        content: "📍 ";
+    }
+
+    .card {
+        margin-bottom: 2rem;
+
+    }
+
+    footer {
+        color: aliceblue;
+    }
+
 }

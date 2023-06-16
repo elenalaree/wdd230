@@ -14,3 +14,24 @@ hamButton.addEventListener('click', () => {
 	navigation.classList.toggle('open');
 	hamButton.classList.toggle('open');
 });
+
+function toggleDark(){
+	var links = document.getElementsByTagName('link');
+	if (links.length == 4 ){ 
+	
+	var link = document.createElement("link");
+	link.type= "text/css";
+	link.rel = "stylesheet";
+	document.head.appendChild(link);
+	link.href = 'styles/dark.css';
+	}
+	else{
+		var dark = links[4];
+		dark.remove();
+	}
+}
+
+document.getElementById("mode").onclick = function checkClick(){
+	toggleDark();
+	console.log("This clicks.");
+}
