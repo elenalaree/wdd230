@@ -4,12 +4,17 @@ body {
     background-attachment: fixed;
     color: aliceblue
 }
-nav a {
-    color:aliceblue;
+
+.navigation a {
+    color: aliceblue;
 }
 
-.card{
-    background-color:var(--feather); 
-    color: aliceblue;
+.card {
+    background-color: var(--feather);
 
+
+}
+
+.card a {
+    color: aliceblue;
 }

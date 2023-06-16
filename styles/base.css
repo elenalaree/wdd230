@@ -21,7 +21,7 @@
 body {
     background: hsla(173, 98%, 16%, 1);
     height: 100vh;
-    background: linear-gradient(180deg, hsla(173, 98%, 16%, 1) 0%, hsla(0, 0%, 100%, 1) 47%, hsla(173, 98%, 16%, 1) 100%);
+    background: linear-gradient(180deg, hsla(173, 98%, 16%, 1) 15%, hsla(0, 0%, 100%, 1) 47%, hsla(173, 98%, 16%, 1) 100%);
     background-attachment: fixed;
 }
 
@@ -221,7 +221,7 @@ nav li {
         padding: 1rem;
         text-align: center;
         text-decoration: none;
-        color: black;
+        color: aliceblue;
         border:1px solid var(--forest)
     }
 
