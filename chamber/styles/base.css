@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Cormorant+Garamond:ital,wght@0,300;0,700;1,300&display=swap');
+
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+header{
+    position: relative;
+    width: 100vw;
+    overflow: hidden;
+}
+
+h1 {
+    position: absolute;
+    text-align: center;
+    color: #326D6E;
+    background-color: black;
+}
+
+.hero {
+    height: 40vh;
+    width: 100vh;
+    background-size: contain;
+}
+
+
+nav a {
+    text-decoration: none;
+    color: var(--midnight);
+}
+
+/* Not hamburger menu */
+nav {
+    font-family: 'Architects daughter', serif;
+}
+
+nav ul {
+    font-size: 1.25em;
+}
+
+
+nav li {
+    text-decoration: none;
+    list-style: none;
+    padding: 5px;
+    margin: auto;
+    width: 100%;
+}
+
+
+@media (max-width: 750px) {
+    h1 {
+        font-size: 1.6em;
+        width: 100%;
+        top: 15vh;
+        left: 0;
+    }
+    /* All hamburger menu things. */
+
+    #menu {
+        font-size: 1.5rem;
+        border: 1px solid rgba(255, 254, 254, 0.3);
+        padding: 3px 7px 6px;
+        background-color: var(--forest);
+        color: #fff;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    #menu::before {
+        content: "☰";
+    }
+
+    #menu.open::before {
+        content: "X";
+    }
+
+    .navigation {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        background-color: black;
+        color: white;
+    }
+
+    .navigation li {
+        display: none;
+    }
+
+    .navigation li a {
+        display: block;
+        padding: 1rem;
+        text-align: center;
+        text-decoration: none;
+        color: aliceblue;
+        border:1px solid var(--forest)
+    }
+
+    .navigation li a:hover {
+        background-color: #bbb;
+        color: #333;
+        font-weight: 700;
+    }
+
+    /* when the button is clicked - the open class is toggle (added/removed) and accounted for here */
+    .open li {
+        display: block;
+        width: 100%;
+    }
+
+    .open li a {
+        display: block;
+    }
+
+    .active::before {
+        content: "📍 ";
+    }
+
+    .card {
+        margin-bottom: 2rem;
+
+    }
+
+    footer {
+        color: black;
+    }
+
+}

@@ -1,0 +1,78 @@
+@media (min-width: 750px) {
+
+    #menu {
+        display: none;
+    }
+
+    .hero {
+        background-size: cover;
+        width: 100vw;
+    }
+
+    header {
+        justify-content: center;
+        
+    }
+
+    h1 {
+        
+        margin: 0;
+        padding-left: 1.5rem;
+    }
+
+    main {
+        width: 60%;
+        margin: auto;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: space-evenly;
+        font-size: 1.5em;
+    }
+
+
+    nav li {
+        display: inline;
+    }
+
+    nav li:hover {
+        background: rgb(255, 255, 255);
+        background: linear-gradient(315deg, rgba(255, 255, 255, 0) 18%, rgba(52, 99, 122, 1) 50%, rgba(255, 255, 255, 0) 85%);
+    }
+
+    nav li a:hover {
+        color: white;
+    }
+
+    .card {
+        font-size: 1.25em;
+    }
+
+    .card li {
+        text-align: left;
+        padding: .1rem;
+    }
+
+    .card-holder {
+        display: grid;
+        grid-template: repeat(4, 1fr)/ repeat(6, 1fr);
+    }
+
+    .activities {
+        grid-area: 1/1/5/5;
+    }
+
+    .info {
+        grid-area: 1/5/5/7;
+    }
+
+    footer {
+        color: white;
+        position: fixed;
+        bottom: 0px;
+        width: 100vw;
+        padding: .5rem;
+    }
+
+}
