@@ -33,5 +33,4 @@ function toggleDark(){
 
 document.getElementById("mode").onclick = function checkClick(){
 	toggleDark();
-	console.log("This clicks.");
 }

@@ -4,22 +4,9 @@
         display: none;
     }
 
-
-
-    header {
-        justify-content: center;
-        
-    }
-
     h1 {
-        
+        font-size: 2.5em;
         margin: 0;
-        padding-left: 1.5rem;
-    }
-
-    main {
-        width: 60%;
-        margin: auto;
     }
 
     nav ul {

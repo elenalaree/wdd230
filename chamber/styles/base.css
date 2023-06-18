@@ -1,63 +1,89 @@
 @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Cormorant+Garamond:ital,wght@0,300;0,700;1,300&display=swap');
 
 
-*{
+* {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
     text-align: center;
 }
 
-header{
-    position: relative;
+header {
+    display: flex;
+    height: 50vh;
     width: 100vw;
-    overflow: hidden;
+    align-items: center;
 }
 
 h1 {
-    position: absolute;
+    height: fit-content;
     text-align: center;
     color: #326D6E;
     background-color: black;
-    width: 100%;
-    top: 15vh;
-    left: 0;
-    padding: .5rem;
+    z-index: 10;
+    padding: 1.5rem;
+    margin: auto;
+    width: 100vw;
 }
 
+.heroholder {
+    display: flex;
+    overflow: hidden;
+    height: 50vh;
+    position: absolute;
+    top: 0;
+    width: 100vw;
+}
+
+
 .hero {
-    height: 40vh;
-    min-width: 100vw;
+    background-repeat: no-repeat;
     background-size: contain;
+
 }
 
 .card {
+    width: 70vw;
+    min-height: 30vh;
     background-color: aliceblue;
     border: 1px solid black;
-    margin: 1rem;
+    margin: 1rem auto;
     border-radius: 7px;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
+.sponsor {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+}
+
+.ad {
+
+    border: 1px solid black;
+    margin: 1rem;
+    border-radius: 7px;
+}
+
 .card h3 {
-    background-color: var(--marine);
+    background-color: gray;
     color: aliceblue;
-    padding: 1rem;
+    padding: .5rem;
     border-radius: 6px 6px 0 0;
     border-bottom: 1px solid var(--midnight)
 }
 
-
-
-
+.card h2 {
+    background-color: black;
+    color: aliceblue;
+    padding: .5rem;
+    border-radius: 6px 6px 0 0;
+    border-bottom: 1px solid black
+}
 
 .card p {
     padding: .5rem;
-
-}
-
-.events {
-
 }
 
 nav a {
@@ -83,12 +109,16 @@ nav li {
     width: 100%;
 }
 
+footer {
+    margin-bottom: 22vh;
+}
 
 @media (max-width: 750px) {
     h1 {
         font-size: 1.6em;
 
     }
+
     /* All hamburger menu things. */
 
     #menu {
@@ -128,7 +158,7 @@ nav li {
         text-align: center;
         text-decoration: none;
         color: aliceblue;
-        border:1px solid var(--forest)
+        border: 1px solid var(--forest)
     }
 
     .navigation li a:hover {

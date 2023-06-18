@@ -12,7 +12,9 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://elenalaree.github.io/wdd230/chamber/">
     <meta property="og:image" content="images/hogwarts.jpg">
-    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/larger.css">
     <link rel="icon" href="favicon-shield.ico">
@@ -21,10 +23,11 @@
 <body>
     <header>
         <h1>Hogwarts School of Witchcraft and Wizardry</h1>
-        <img src="./images/hero.jpg" alt="Hogwarts halls" class="hero">
     </header>
-
-    <button id="menu"></button>
+    <div class="heroholder">
+        <img src="./images/hero.jpg" alt="Hogwarts halls" class="hero">
+        <button id="menu"></button>
+    </div>
 
     <nav>
         <ul class="navigation">
@@ -49,7 +52,8 @@
                 Join our Newsletter!
             </h2>
             <p>
-                Bird his said then that the name and, on made upon all on said, and than and beguiling i from. Stock censer then some my wore nevermore each a that i, with more at tell if. Methought these volume and.
+                Bird his said then that the name and, on made upon all on said, and than and beguiling i from. Stock
+                censer then some my wore nevermore each a that i, with more at tell if. Methought these volume and.
             </p>
         </section>
         <section class="weather card">
@@ -61,33 +65,39 @@
                 followed soon, chamber.
             </p>
         </section>
-        <section class="sponsor card">
+        <section class="card">
             <h2>
                 Sponsor spotlights
             </h2>
-            <div>
-                <h3>Honeydukes Sweetshop</h3>
-                <p>
-                    Minute me raven ghastly obeisance tis the darkness fact more. Tufted one floor the soul ominous is
-                    followed soon, chamber.
-                </p>
-            </div>
-            <div>
-                <h3>The Three Broomsticks</h3>
-                <p>
-                    Long did long tales condemned fall whence which soon almost, that feels been might steel though one. Scape for third.
-                </p>
-            </div>
-            <div>
-                <h3>Dervish and Banges</h3>
-                <p>
-                    So mystery on for i a repeating i wore and caught, evil prophet and as broken maiden came, muttered countenance said.
-                </p>
-            </div>
+            <section class="sponsor">
 
 
+                <div class="ad">
+                    <h3>Honeydukes Sweetshop</h3>
+                    <p>
+                        Minute me raven ghastly obeisance tis the darkness fact more. Tufted one floor the soul ominous
+                        is
+                        followed soon, chamber.
+                    </p>
+                </div>
+                <div class="ad">
+                    <h3>The Three Broomsticks</h3>
+                    <p>
+                        Long did long tales condemned fall whence which soon almost, that feels been might steel though
+                        one. Scape for third.
+                    </p>
+                </div>
+                <div class="ad">
+                    <h3>Dervish and Banges</h3>
+                    <p>
+                        So mystery on for i a repeating i wore and caught, evil prophet and as broken maiden came,
+                        muttered countenance said.
+                    </p>
+                </div>
+
+
+            </section>
         </section>
-
     </main>
     <footer>
         <p>
@@ -98,7 +108,6 @@
         <p class="modify">Last Modified: <span id="lastModified"></span></p>
     </footer>
     <script src="./scripts/chamber.js"></script>
-    <script src="../scripts/getDates.js"></script>
 </body>
 
 </html>
