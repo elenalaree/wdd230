@@ -1,0 +1,23 @@
+main {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin: auto;
+}
+picture {
+background-color: black;
+}
+picture img {
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+@keyframes fadeInAnimation {
+    0% {
+        background-color: black;
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
+}
