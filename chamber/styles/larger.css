@@ -1,18 +1,34 @@
 @media (min-width: 750px) {
-
     #menu {
         display: none;
     }
 
+    header{
+        height: 40vh;
+    }
+
+    .heroholder{
+        background-color: black;
+        height: 40vh;
+    }
+    
+
     h1 {
         font-size: 2.5em;
         margin: 0;
+        
+    }
+    nav{
+        
     }
 
     nav ul {
         display: flex;
         justify-content: space-evenly;
         font-size: 1.5em;
+        padding: 5px;
+        margin: auto;
+        /* width: 100%; */
     }
 
 
@@ -26,16 +42,19 @@
     }
 
     nav li a:hover {
-        color: white;
+        color: black;
     }
 
     .card {
         font-size: 1.25em;
+        width: 40%;
     }
 
     .card-holder {
         display: flex;
         flex-wrap: wrap;
+        width: 70%;
+        margin: auto;
     }
 
 
