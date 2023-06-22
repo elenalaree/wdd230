@@ -15,18 +15,37 @@ hamButton.addEventListener('click', () => {
 	hamButton.classList.toggle('open');
 });
 
-function toggleDark(){
-	var links = document.getElementsByTagName('link');
-	if (links.length == 4 ){ 
-	
-	var link = document.createElement("link");
-	link.type= "text/css";
-	link.rel = "stylesheet";
-	document.head.appendChild(link);
-	link.href = 'styles/dark.css';
-	}
+const dt = Date.now();
+var last_date = JSON.parse(localStorage.getItem("date")) || "";
+
+function convert(milliseconds){
+	if(last_date != ""){
+	let days = Math.floor(milliseconds/86400000);
+	return days}
 	else{
-		var dark = links[4];
-		dark.remove();
+		return 0;
 	}
 }
+
+function visited(){
+	const welcome = document.getElementById("message");
+	if(last_date == ""){
+		console.log("Welcome")
+		welcome.textContent = "Welcome! Let us know if you have any questions!"
+	}
+	localStorage.setItem('date', dt)
+	var time_since = dt-last_date 
+	var conv_time = convert(time_since)
+	if (conv_time < 1 && last_date != ""){
+		welcome.textContent = "Be back soon! Awesome!"
+		console.log("Wow")
+	}
+	else if(conv_time == 1){
+		welcome.textContent = `You last visited ${conv_time} day ago!`
+	}
+	else if (conv_time > 1){
+		welcome.textContent = `You last visited ${conv_time} days ago!`
+	}
+	console.log(conv_time)
+}
+visited()

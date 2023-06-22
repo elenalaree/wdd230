@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Cormorant+Garamond:ital,wght@0,300;0,700;1,300&display=swap');
 
+:root {
+    --feather: #00878A;
+    --marine: #54A7A8;
+    --forest: #326D6E;
+    --accent: #BA6530;
+    --accent2: #6E4932;
+}
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -16,6 +24,7 @@ header {
 }
 
 h1 {
+    font-size: 1.6em;
     height: fit-content;
     text-align: center;
     color: #326D6E;
@@ -49,6 +58,7 @@ h1 {
     border: 1px solid black;
     margin: 1rem auto;
     border-radius: 7px;
+    margin-bottom: 2rem;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
@@ -71,7 +81,7 @@ h1 {
     color: aliceblue;
     padding: .5rem;
     border-radius: 6px 6px 0 0;
-    border-bottom: 1px solid var(--midnight)
+    border-bottom: 1px solid black;
 }
 
 .card h2 {
@@ -107,85 +117,122 @@ nav li {
 
 }
 
-footer {
-    /* margin-bottom: 22vh; */
+/* All hamburger menu things. */
+
+#menu {
+    font-size: 1.5rem;
+    border: 1px solid rgba(255, 254, 254, 0.3);
+    padding: 3px 7px 6px;
+    background-color: black;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
-@media (max-width: 750px) {
-    h1 {
-        font-size: 1.6em;
+#menu::before {
+    content: "☰";
+}
 
-    }
+#menu.open::before {
+    content: "X";
+}
 
-    /* All hamburger menu things. */
+.navigation {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    background-color: black;
+    color: white;
+}
 
-    #menu {
-        font-size: 1.5rem;
-        border: 1px solid rgba(255, 254, 254, 0.3);
-        padding: 3px 7px 6px;
-        background-color: black;
-        color: #fff;
-        position: absolute;
-        top: 0;
-        right: 0;
-    }
+.navigation li {
+    display: none;
+}
 
-    #menu::before {
-        content: "☰";
-    }
+.navigation li a {
+    display: block;
+    padding: .25rem;
+    text-align: center;
+    text-decoration: none;
+    color: aliceblue;
+    border: 1px solid var(--forest)
+}
 
-    #menu.open::before {
-        content: "X";
-    }
+.navigation li a:hover {
+    background-color: #bbb;
+    color: #333;
+    font-weight: 700;
+}
 
-    .navigation {
-        display: flex;
-        flex-direction: column;
-        list-style: none;
-        background-color: black;
-        color: white;
-    }
+/* when the button is clicked - the open class is toggle (added/removed) and accounted for here */
+.open li {
+    display: block;
+    width: 100%;
+}
 
-    .navigation li {
-        display: none;
-    }
+.open li a {
+    display: block;
+}
 
-    .navigation li a {
-        display: block;
-        padding: .25rem;
-        text-align: center;
-        text-decoration: none;
-        color: aliceblue;
-        border: 1px solid var(--forest)
-    }
+.active::before {
+    content: "📍 ";
+}
 
-    .navigation li a:hover {
-        background-color: #bbb;
-        color: #333;
-        font-weight: 700;
-    }
+footer {
+    color: black;
+}
 
-    /* when the button is clicked - the open class is toggle (added/removed) and accounted for here */
-    .open li {
-        display: block;
-        width: 100%;
-    }
 
-    .open li a {
-        display: block;
-    }
 
-    .active::before {
-        content: "📍 ";
-    }
+/* Discovery */
 
-    .card {
-        margin-bottom: 2rem;
+.main-holder {
+    display: block;
+    width: 100%;
+}
 
-    }
+aside{
+    display: grid;
+    grid-template: repeat(auto-fill, minmax(25px, 1fr)) / repeat(5, 1fr);
+    height: 770px;
+}
 
-    footer {
-        color: black;
-    }
+.newcard{
+    background-color: aliceblue;
+    border: 1px solid black;
+    border-radius: 7px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
 
+.welcome{
+    grid-row: 1 / 4;
+    grid-column: 2 / 5;
+    border: 1px solid black;
+    margin: 12px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.school-events {
+    grid-row: 4 / span 8;
+    grid-column: 2 / 5;
+    margin: 0;
+    
+}
+
+.local-events{
+    grid-row: 13 / span 8;
+    grid-column: 2 / 5;
+    margin:0;
+}
+
+.house-cup{
+    grid-row: 22 /span 8;
+    grid-column: 2 / 5;
+}
+
+.pics figure img{
+    max-width: 90%;
 }
