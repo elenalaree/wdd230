@@ -38,15 +38,16 @@
 
     .navigation li {
         display: inline;
+        width: 100%;
     }
 
     nav li:hover {
         background: rgb(255, 255, 255);
-        background: linear-gradient(315deg, rgba(255, 255, 255, 0) 18%, rgba(52, 99, 122, 1) 50%, rgba(255, 255, 255, 0) 85%);
+        background: linear-gradient(330deg, rgba(255, 255, 255, 0) 18%, rgba(186, 101, 48, 1) 50%, rgba(255, 255, 255, 0) 85%);
     }
 
     nav li a:hover {
-        color: black;
+        color: white;
     }
 
     .card {
@@ -67,7 +68,7 @@
         display: grid;
         width: 100%;
         grid-template: repeat(auto-fill, minmax(10px, 1fr)) / repeat(2, 1fr);
-    
+        
     }
     
     aside {
