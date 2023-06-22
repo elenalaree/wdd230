@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lazy Loader</title>
+    <link rel="stylesheet" href="styles/lazyload.css">
+</head>
+
+<body>
+    <header>
+        <h1>Lazy Loader Page</h1>
+    </header>
+    <main>
+        <div class="hero">
+            <picture>
+                <img srcset="./images/SA-temple-sm.webp" alt="San Antonio temple" media="max-width: 500px">
+                <img srcset="./images/SA-temple-md.webp" alt="San Antonio temple" media="max-width: 1000px">
+                <img src="./images/SA-temple-lrg.webp" alt="San Antonio temple" width="1500" height="750">
+
+            </picture>
+        </div>
+
+    </main>
+    <footer>
+
+    </footer>
+</body>
+
+</html>
