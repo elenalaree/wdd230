@@ -19,7 +19,7 @@
 
 
 body {
-    background: hsla(173, 98%, 16%, 1);
+    background: var(--forest);
     height: 100vh;
     background: linear-gradient(180deg, hsla(173, 98%, 16%, 1) 15%, hsla(0, 0%, 100%, 1) 47%, hsla(173, 98%, 16%, 1) 100%);
     background-attachment: fixed;
@@ -109,10 +109,30 @@ h1 {
     margin: auto;
     color: white;
 }
+.hero{
+    position: relative;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.temple-label{
+    position: absolute;
+    top:15vh;
+    right: 8vw;
+    font-size: 16px;
+    font-family: cursive;
+    color: black;
+}
+.hero img{
+    width: 100%;
+    object-fit: contain;
+}
+
 
 nav a {
     text-decoration: none;
-    color: var(--midnight);
+    color: white;
 }
 
 /* Not hamburger menu */
@@ -135,7 +155,7 @@ nav li {
 
 .border {
     padding: .5rem;
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid black;
 }
 
 .card {
@@ -215,6 +235,7 @@ nav li {
 
     .navigation li {
         display: none;
+        width: 100%;
     }
 
     .navigation li a {

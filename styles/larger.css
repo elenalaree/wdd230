@@ -20,8 +20,16 @@ h1{
     padding-left: 1.5rem;
 }
 
+.hero{
+    height: 500px;
+}
+
+.temple-label {
+    font-size: 2em;
+}
+
 main{
-    width: 60%;
+    width: 70%;
     margin: auto;
 }
 nav ul {
@@ -32,12 +40,13 @@ nav ul {
 
 
 nav li {
+    
     display: inline;
+    background: linear-gradient(315deg, rgba(255, 255, 255, 0) 18%, rgba(1, 98, 85,1) 50%, rgba(255, 255, 255, 0) 85%);
 }
 
 nav li:hover {
-    background: rgb(255, 255, 255);
-    background: linear-gradient(315deg, rgba(255, 255, 255, 0) 18%, rgba(52,99,122,1) 50%, rgba(255, 255, 255, 0) 85%);
+    background: linear-gradient(315deg, rgba(255, 255, 255, 0) 18%, rgba(40, 109, 122,1) 50%, rgba(255, 255, 255, 0) 85%);
 }
 nav li a:hover {
     color: white;
@@ -67,7 +76,6 @@ nav li a:hover {
 
 footer {
     color: white;
-    position: fixed;
     bottom: 0px;
     width: 100vw;
     padding: .5rem;

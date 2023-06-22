@@ -34,3 +34,13 @@ function toggleDark(){
 document.getElementById("mode").onclick = function checkClick(){
 	toggleDark();
 }
+
+const visits = document.getElementById("visits");
+
+function visitCounter(){
+	var visit_tally = JSON.parse(localStorage.getItem("tally")) || 0;
+	visit_tally ++
+	localStorage.setItem("tally", visit_tally)
+	visits.textContent = visit_tally
+}
+visitCounter()

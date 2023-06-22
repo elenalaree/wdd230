@@ -1,4 +1,8 @@
+main, .hero{
+    width: 100%;
+}
 .hero img {
     width: 100%;
     height: auto;
+    margin:0;
 }
