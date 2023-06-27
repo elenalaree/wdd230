@@ -21,11 +21,12 @@ h1{
 }
 
 .hero{
-    height: 500px;
+    height: 420px;
 }
 
 .temple-label {
     font-size: 2em;
+    right: 15vw;
 }
 
 main{
@@ -81,4 +82,10 @@ footer {
     padding: .5rem;
 }
 
+}
+
+@media (min-width:1200px) {
+    .hero{
+        height: 500px;
+    }
 }

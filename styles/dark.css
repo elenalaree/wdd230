@@ -11,10 +11,15 @@ body {
 
 .card {
     background-color: var(--feather);
-
+    color: white;
 
 }
 
 .card a {
-    color: aliceblue;
+    color: white;
+}
+
+.border{
+    background: none;
+    border-color: white;
 }

@@ -156,6 +156,9 @@ nav li {
 .border {
     padding: .5rem;
     border-bottom: 1px solid black;
+    background-color: white;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 15%, rgb(255, 255, 255) 50%, rgba(255, 255, 255, 0) 85%);
+
 }
 
 .card {
@@ -197,6 +200,11 @@ nav li {
 .modify {
     color: rgb(244, 241, 216);
 }
+
+    footer {
+        color: aliceblue;
+        background-color: var(--forest);
+    }
 
 @media (max-width: 750px) {
     h1 {
@@ -272,8 +280,6 @@ nav li {
 
     }
 
-    footer {
-        color: aliceblue;
-    }
+
 
 }
