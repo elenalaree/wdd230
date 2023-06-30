@@ -1,0 +1,38 @@
+form, .thanks {
+    padding: 1.5rem;
+    width: 50%;
+    background: var(--feather);
+    color: white;
+    border: 1px solid var(--forest);
+    box-shadow: var(--shadow);
+    margin: 1rem auto;
+    border-radius: var(--radius);
+}
+.thanks{
+    line-height: 2.5rem;
+}
+form label {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin: .5rem;
+}
+
+.top{
+    border-radius: var(--radius);
+    height: 35px;
+}
+
+.submitBtn {
+    padding: .5rem;
+    background: var(--marine);
+    color: white;
+    border-color: var(--midnight);
+    margin-top: .5rem;
+    border-radius: var(--radius);
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+}

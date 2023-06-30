@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elena Rogers - WDD 230 - Chamber of Commerce</title>
+    <meta name="description" content="Hogwarts chamber page for hearing the latest from Hogwarts.">
+    <meta name="author" content="Elena Rogers">
+    <meta property="og:title" content="Hogwarts Chamber Website">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://elenalaree.github.io/wdd230/chamber/">
+    <meta property="og:image" content="https://github.com/elenalaree/wdd230/blob/main/chamber/images/hogwarts.webp">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="icon" href="favicon-shield.ico">
+</head>
+
+<body>
+    <header>
+        <h1>Hogwarts Chamber of Commerce</h1>
+    </header>
+    <div class="heroholder">
+        <img src="./images/hero.webp" alt="Hogwarts halls" class="hero">
+        <button id="menu"></button>
+    </div>
+
+    <nav>
+        <ul class="navigation">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#staff">Staff</a></li>
+            <li><a href="discover.html">Activities</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div>
+            <form method="get" action="thankyou.html">
+                <label>Applicant's First Name:
+                    <input type="text" id="first-name" name="first-name" required></label>
+
+                <label>Applicant's Last Name:
+                    <input type="text" id="last-name" name="last-name" required></label>
+
+                <label>Applicant's Title or Position:
+                    <input type="text" id="position" name="position" pattern="[A-Za-z\s\-]{7,}" required></label>
+
+                <label>Email Address:
+                    <input type="email" id="email" name="email" placeholder="example@example.com" required></label>
+
+                <label>Mobile Phone Number:
+                    <input type="tel" id="phone" name="phone" required></label>
+
+                <label>Business/Organization Name:
+                    <input type="text" id="organization" name="organization" required></label>
+
+                <label">Membership Level:
+                    <select id="membership-level" name="membership-level">
+                        <option value="NP Membership">NP Membership (No Fee)</option>
+                        <option value="Bronze Membership">Bronze Membership</option>
+                        <option value="Silver Membership">Silver Membership</option>
+                        <option value="Gold Membership">Gold Membership</option>
+                    </select></label>
+
+                <label">Business/Organization Description:
+                    <textarea id="description" name="description"></textarea></label>
+
+                <input type="hidden" id="timestamp" name="timestamp" value="">
+
+                <input type="submit" value="Purchase Membership">
+            </form>
+        </div>
+    </main>
+    <footer>
+        <p>
+            &copy;<span id="year"></span>
+            ✨ Elena Rogers ✨
+            Project for wdd230
+        </p>
+        <p class="modify">Last Modified: <span id="lastModified"></span></p>
+    </footer>
+    <script src="./scripts/chamber.js"></script>
+</body>
+
+</html>

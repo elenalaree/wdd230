@@ -1,11 +1,3 @@
-// Get year code
-const d = new Date();
-const yearBox = document.getElementById("year");
-yearBox.textContent = d.getFullYear()
-
-// date modified code
-var modified = document.getElementById("lastModified");
-modified.textContent = document.lastModified;
 
 const hamButton = document.querySelector('#menu');
 const navigation = document.querySelector('.navigation');
@@ -17,7 +9,7 @@ hamButton.addEventListener('click', () => {
 
 function toggleDark() {
 	var links = document.getElementsByTagName('link');
-	if (links.length == 4) {
+	if (links.length == 5) {
 
 		var link = document.createElement("link");
 		link.type = "text/css";
@@ -26,7 +18,7 @@ function toggleDark() {
 		link.href = 'styles/dark.css';
 	}
 	else {
-		var dark = links[4];
+		var dark = links[5];
 		dark.remove();
 	}
 }
@@ -35,12 +27,11 @@ document.getElementById("mode").onclick = function checkClick() {
 	toggleDark();
 }
 
-const visits = document.getElementById("visits");
+// Get year code
+const d = new Date();
+const yearBox = document.getElementById("year");
+yearBox.textContent = d.getFullYear()
 
-function visitCounter() {
-	var visit_tally = JSON.parse(localStorage.getItem("tally")) || 0;
-	visit_tally++
-	localStorage.setItem("tally", visit_tally)
-	visits.textContent = visit_tally
-}
-visitCounter()
+// date modified code
+var modified = document.getElementById("lastModified");
+modified.textContent = document.lastModified;

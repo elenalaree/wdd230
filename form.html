@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elena Rogers - WDD 230 - Web Frontend Development</title>
+    <meta name="description"
+        content="Course assignment page for Elena Rogers in the WDD 230 - Web Frontend Development class.">
+    <meta name="author" content="Elena Rogers">
+    <meta property="og:title" content="Elenas Website">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://elenalaree.github.io/wdd230/">
+    <meta property="og:image" content="https://elenalaree.github.io/wdd230/images/profile.webp">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="stylesheet" href="styles/form.css">
+    <link rel="icon" href="./images/faviconE.ico">
+</head>
+
+<body>
+    <header>
+        <img src="images/profile.webp" alt="elena rogers" height="200" width="200">
+        <h1>Elena L. Rogers</h1>
+    </header>
+    <label class="switch">
+        <input type="checkbox" id="mode">
+        <span class="slider round"></span>
+    </label>
+    <button id="menu"></button>
+    <nav>
+        <ul class="navigation">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="./chamber/index.html">Chamber</a></li>
+            <li><a href="./week01/chamber-site-plan.html">Site Plan</a></li>
+            <li><a href="#survey">Survey</a></li>
+        </ul>
+    </nav>
+    <main>
+        <form method="get" action="record.html">
+            <div>
+                <label for="username">Username:
+                <input class="top" type="text" id="username" name="username" required></label>
+            </div>
+            <div>
+                <label for="password">Password:
+                <input class="top" type="password" id="password" name="password" required pattern="[a-zA-Z0-9]{8,}"></label>
+            </div>
+            <div>
+                <label for="confirmPassword">Confirm Password:
+                <input class="top" type="password" id="confirmPassword" name="confirmPassword" required
+                    onchange="checkPasswordsMatch()"></label>
+            </div>
+            <div>
+                <label for="email">Email:
+                <input class="top" type="email" id="email" name="email" required pattern="[a-zA-Z0-9._%+-]+@byui\.edu$"></label>
+            </div>
+            <div>
+                <label for="pageRating">Page Rating:
+                <input type="range" id="pageRating" name="pageRating" min="1" max="10" step="1"
+                    oninput="updateRatingValue(this.value)"></label>
+                <span id="ratingValue">5</span>
+            </div>
+            <div>
+                <button class="submitBtn" type="submit">Create Account</button>
+            </div>
+        </form>
+    </main>
+    <footer>
+        <p>
+            &copy;<span id="year"></span>
+            &#x1F338; Elena LaRee Rogers &#x1F338;
+            Del Rio, Texas
+        </p>
+        <p class="modify">Last Modified: <span id="lastModified"></span></p>
+    </footer>
+    <script src="scripts/formPage.js"></script>
+</body>
+
+</html>
