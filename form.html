@@ -56,14 +56,14 @@
                     onchange="checkPasswordsMatch()"></label>
             </div>
             <div>
-                <label for="email">Email:
-                <input title="Please enter a valid email address" class="top" type="email" id="email" name="email" required pattern="[a-zA-Z0-9._%+-]+@byui\.edu$"></label>
+                <label for="email">Email:</label>
+                <input title="Please enter a valid email address" class="top" type="email" id="email" name="email" required pattern="[a-zA-Z0-9._%+-]+@byui\.edu$">
             </div>
             <div>
                 <label for="pageRating">Page Rating:
                 <input type="range" id="pageRating" name="pageRating" min="1" max="10" step="1"
                     oninput="updateRatingValue(this.value)"></label>
-                <span id="ratingValue">5</span>
+                <span id="ratingValue">6</span>
             </div>
             <div>
                 <button class="submitBtn" type="submit" value="create-account">Sign up</button>
