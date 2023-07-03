@@ -234,14 +234,50 @@ aside{
 
 /* ------- JOIN PAGE --------- */
 
-form {
-    width: 50%;
-    display:flex;
-    flex-direction: column;
+.form-page {
+    display: flex;
+    padding-bottom: 50px;
+}
+
+.join-me {
+    width: 30%;
     margin: auto;
-    text-align: left;
+    display: block;
 }
 
 label {
+    text-align: left;
     padding: .5rem;
+    display: flex;
+    flex-direction: column; 
 }
+
+.submitBtn {
+    padding: 5px;
+}
+
+.join-me input, .join-me select{
+    height: 32px;
+}
+
+.join-me input, .join-me textarea, .join-me select {
+    border-radius: 5px;
+    border: 1px solid black
+}
+
+.options {
+    width: 50%;
+    
+}
+
+.options ul {
+    list-style: none;
+    margin-bottom: 2rem;
+}
+
+
+.options h2 {
+    text-decoration: underline ;
+}
+
+

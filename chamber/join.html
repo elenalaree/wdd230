@@ -38,8 +38,8 @@
         </ul>
     </nav>
     <main>
-        <div>
-            <form method="get" action="thankyou.html">
+        <section class="form-page">
+            <form class="join-me" method="get" action="thankyou.html">
                 <label>Applicant's First Name:
                     <input type="text" id="first-name" name="first-name" required></label>
 
@@ -58,7 +58,7 @@
                 <label>Business/Organization Name:
                     <input type="text" id="organization" name="organization" required></label>
 
-                <label">Membership Level:
+                <label>Membership Level:
                     <select id="membership-level" name="membership-level">
                         <option value="NP Membership">NP Membership (No Fee)</option>
                         <option value="Bronze Membership">Bronze Membership</option>
@@ -66,16 +66,72 @@
                         <option value="Gold Membership">Gold Membership</option>
                     </select></label>
 
-                <label">Business/Organization Description:
+                <label>Business/Organization Description:
                     <textarea id="description" name="description"></textarea></label>
 
                 <input type="hidden" id="timestamp" name="timestamp" value="">
 
-                <input type="submit" value="Purchase Membership">
+                <input type="submit" value="Purchase Membership" class="submitBtn">
             </form>
-        </div>
-        <section>
-            
+            <article class="options">
+                <h2>Non-profit organization</h2>
+                <ul>
+                    <li>
+                        Email list
+                    </li>
+                    <li>
+                        Discounts to events
+                    </li>
+                    <li>
+                        Special offers
+                    </li>
+                </ul>
+
+                <h2>Bronze Tier</h2>
+                <ul>
+                    <li>
+                        Same as above as well as:
+                    </li>
+                    <li>
+                        Hogwarts pin
+                    </li>
+                    <li>
+                        One ad in the Hogwarts Newsletter
+                    </li>
+                    <li>
+                        Invitation to special events
+                    </li>
+                </ul>
+
+                <h2>Silver Tier</h2>
+                <ul>
+                    <li>
+                        Same as above as well as:
+                    </li>
+                    <li>
+                        An additional add in the Hogwarts Newsletter
+                    </li>
+                    <li>
+                        One Yule Ball ticket
+                    </li>
+                </ul>
+
+                <h2>Gold Tier</h2>
+                <ul>
+                    <li>
+                        Same as above as well as:
+                    </li>
+                    <li>
+                        Hogwarts Mug
+                    </li>
+                    <li>
+                        Additional Yule Ball ticket
+                    </li>
+                    <li>
+                        An ad on the Hogwarts Chamber Page
+                    </li>
+                </ul>
+            </article>
         </section>
     </main>
     <footer>
