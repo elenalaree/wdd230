@@ -1,0 +1,19 @@
+#cards {
+    display: grid;
+    grid-template-columns:  repeat(auto-fit, minmax(320px, 1fr));
+}
+
+h2 {
+    color: darkgreen;
+}
+
+section {
+    background-color: lavender;
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid rgb(184, 184, 245)
+}
+
+main {
+    text-align: center;
+}
