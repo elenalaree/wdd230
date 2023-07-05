@@ -44,3 +44,43 @@ function visitCounter() {
 	visits.textContent = visit_tally
 }
 visitCounter()
+
+
+//weather js
+
+const weatherHolder = document.querySelector('#weather');
+
+const apiKey = "42bd6e08d7e2ce3a0832c24d332bfd1e";
+const url = `https://api.openweathermap.org/data/2.5/weather?lat=29.37&lon=-100.89&units=imperial&appid=${apiKey}`;
+
+async function apiFetch() {
+    try {
+        const resp = await fetch(url);
+        if(resp.ok) {
+            const data = await resp.json();
+            console.log(data);
+            displayResults(data)
+        }
+        else{
+            throw Error(await resp.text());
+        }
+    }
+    catch (error) {
+        console.log(error);
+    }
+}
+
+function displayResults(data){
+    const weather = data.weather[0];
+	const temp = Math.round(data.main.temp);
+	const description = weather.description;
+	const sliced = description.split(" ")
+	for (let i=0; i < sliced.length; i++){
+		sliced[i] = sliced[i][0].toUpperCase() + sliced[i].substr(1)
+	}
+	
+    const weatherUrl = `<img src="https://openweathermap.org/img/w/${weather.icon}.png" alt="${weather.main}">`
+    weatherHolder.innerHTML = `${weatherUrl} ${temp}&deg;F - ${sliced.join(" ")} `;
+}
+
+apiFetch();
