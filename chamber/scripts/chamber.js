@@ -99,23 +99,64 @@ if (page == "index.html"){
 
 
 const members = document.querySelector('#members');
-const memberList = "https://github.com/elenalaree/wdd230/blob/main/chamber/data/members.json";
+const memberList = "https://elenalaree.github.io/wdd230/chamber/data/members.json";
 
 async function memberFetch() {
     try {
         const response = await fetch(memberList);
         if(response.ok) {
             const info = await response.json();
-            console.log(info);
-            displayResults(info)
+            printMembers(info)
         }
         else{
-            throw Error(await resp.text());
+            throw Error(await response.text());
         }
     }
     catch (error) {
         console.log(error);
     }
+}
+
+function printMembers(data){
+	const list = data.members;
+	console.log(list)
+	list.forEach(card => {
+		let memberCard = document.createElement('section');
+
+        let shopName = document.createElement('h2');
+        let storeFront =  document.createElement('img');
+        let membershipLvl = document.createElement('h4');
+        let phone = document.createElement('h4');
+		let web = document.createElement('a');
+		let type =document.createElement("h4");
+
+		let name = card.name;
+		let businessType = card.businesstype;
+		let image = card.image;
+		let membership = card.membership;
+		let phoneNumber = card.phonenumber;
+		let website = card.websiteurl;
+		console.log(website)
+		shopName.textContent = name;
+		storeFront.setAttribute('src', image);
+		storeFront.setAttribute('alt', `${name} Storefront`);
+		storeFront.setAttribute('loading', "lazy");
+
+		membershipLvl.textContent = membership;
+		phone.textContent = phoneNumber;
+		web.setAttribute("href", website);
+		web.textContent = `${name} Wizsite`
+		type.textContent = businessType;
+
+		memberCard.appendChild(shopName);
+		memberCard.appendChild(type);
+		memberCard.appendChild(phone);
+		memberCard.appendChild(web);
+		memberCard.appendChild(membershipLvl);
+		memberCard.appendChild(storeFront);
+
+		members.appendChild(memberCard);
+	});
 }
 
 if (page == "directory.html"){

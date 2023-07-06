@@ -113,7 +113,7 @@ form input.submitBtn {
 
 }
 
-form lable.top input:required {
+form label.top input:required {
     border-left: 6px solid red;
 }
 form label.top input:required:valid {
