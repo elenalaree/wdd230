@@ -1,3 +1,4 @@
+const page = window.location.pathname.split("/").pop();
 // Get year code
 const d = new Date();
 const yearBox = document.getElementById("year");
@@ -48,4 +49,75 @@ function visited(){
 	}
 	console.log(conv_time)
 }
+
+if (page == "discover.html"){
 visited()
+}
+// API calls
+
+//weather
+const weatherHolder = document.querySelector('#weather-holder');
+
+const apiKey = "42bd6e08d7e2ce3a0832c24d332bfd1e";
+const url = `https://api.openweathermap.org/data/2.5/weather?lat=56.81&lon=-5.105&units=metric&appid=${apiKey}`;
+
+
+async function apiFetch() {
+	try {
+        const resp = await fetch(url);
+        if(resp.ok) {
+            const data = await resp.json();
+            displayResults(data)
+        }
+        else{
+            throw Error(await resp.text());
+        }
+    }
+    catch (error) {
+        console.log(error);
+    }
+}
+
+function displayResults(data){
+    const weather = data.weather[0];
+	const temp = Math.round(data.main.temp);
+	const description = weather.description;
+	const sliced = description.split(" ")
+	for (let i=0; i < sliced.length; i++){
+		sliced[i] = sliced[i][0].toUpperCase() + sliced[i].substr(1)
+	}
+	
+    const weatherUrl = `<img src="https://openweathermap.org/img/w/${weather.icon}.png" alt="${weather.main}">`
+    weatherHolder.innerHTML = `${weatherUrl} ${temp}&deg;F - ${sliced.join(" ")} `;
+}
+
+if (page == "index.html"){
+	apiFetch();
+	}
+
+//API MEMBER FETCH
+
+
+const members = document.querySelector('#members');
+const memberList = "https://www.elenalaree.github.io/wdd230/chamber/data/members.json";
+
+async function memberFetch() {
+    try {
+        const response = await fetch(memberList);
+        if(response.ok) {
+            const info = await response.json();
+            console.log(info);
+            displayResults(info)
+        }
+        else{
+            throw Error(await resp.text());
+        }
+    }
+    catch (error) {
+        console.log(error);
+    }
+}
+
+if (page == "directory.html"){
+	memberFetch();
+	}
