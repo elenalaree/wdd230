@@ -122,7 +122,7 @@ function printMembers(data){
 	console.log(list)
 	list.forEach(card => {
 		let memberCard = document.createElement('section');
-
+		memberCard.setAttribute("class", "card")
         let shopName = document.createElement('h2');
         let storeFront =  document.createElement('img');
         let membershipLvl = document.createElement('h4');
