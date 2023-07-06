@@ -1,0 +1,67 @@
+{
+    "members" : [
+      {
+        "name" : "Madam Malkins",
+        "address" : "29 Diagon Alley",
+        "phonenumber" : "(010) 334 344",
+        "websiteurl" : "wwww.madamMalkins.wiz",
+        "image": "https://elenalaree.github.io/wwd230/chamber/images/madammakins.webp",
+        "membership": "Silver",
+        "businesstype":"Fashion Shop"
+      },
+      {
+        "name" : "Dervish and Banges",
+        "address" : "114 High Street, Hogsmeade, Scotland",
+        "phonenumber" : "(023) 834 665",
+        "websiteurl" : "wwww.dervishbanges.wiz",
+        "image": "https://elenalaree.github.io/wwd230/chamber/images/dervishandbanges.webp",
+        "membership": "Silver",
+        "businesstype":"Magic Instrument and Repair Shop"
+      },
+      {
+        "name" : "Honeydukes Sweetshop",
+        "address" : "62 High Street, Hogsmeade, Scotland",
+        "phonenumber" : "(023) 764 986",
+        "websiteurl" : "wwww.honeydukes.wiz",
+        "image": "https://elenalaree.github.io/wwd230/chamber/images/honeydukes.webp",
+        "membership": "Gold",
+        "businesstype":"Sweet Shop"
+      },
+      {
+        "name" : "Scrivenshaft's Quill Shop",
+        "address" : "86 High Street, Hogsmeade, Scotland",
+        "phonenumber" : "(023) 787 864",
+        "websiteurl" : "wwww.scrivenshafts.wiz",
+        "image": "https://elenalaree.github.io/wwd230/chamber/images/scrivenshafts.webp",
+        "membership": "Gold",
+        "businesstype":"Literature Shop"
+      },
+      {
+        "name" : "The Three Broomsticks",
+        "address" : "44 High Street, Hogsmeade, Scotland",
+        "phonenumber" : "(023) 175 645",
+        "websiteurl" : "wwww.theThreeBroomsticks.wiz",
+        "image": "https://elenalaree.github.io/wwd230/chamber/images/threebroomsticks.webp",
+        "membership": "Silver",
+        "businesstype":"Inn and bar"
+      },
+      {
+        "name" : "Zonko's Joke Shop",
+        "address" : "22 High Street, Hogsmeade, Scotland",
+        "phonenumber" : "(023) 657 887",
+        "websiteurl" : "wwww.zonkos.wiz",
+        "image": "https://elenalaree.github.io/wwd230/chamber/images/zonkos.webp",
+        "membership": "Gold",
+        "businesstype":"Fashion Shop"
+      },
+      {  
+        "name" : "Olivander's Wands",
+        "address" : "68 Diagon Alley",
+        "phonenumber" : "(010) 756 973",
+        "websiteurl" : "wwww.olivanders.wiz",
+        "image": "https://elenalaree.github.io/wwd230/chamber/images/olivanders.webp",
+        "membership": "Bronze",
+        "businesstype":"Wand Shop"
+      }
+    ]
+  }

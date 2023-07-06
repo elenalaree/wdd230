@@ -26,12 +26,8 @@ function displayLinks(weeks){
             linkEl.setAttribute("href", url);
             linkEl.textContent = title;
             weekList.appendChild(linkEl);
-            
-            console.log(title)
         }
-        
         const element = weekArray[i];
-        linkBox.appendChild(weekList)
-        console.log(links)
+        linkBox.appendChild(weekList);
     }
 }
