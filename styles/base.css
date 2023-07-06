@@ -97,20 +97,23 @@ input:checked+.slider:before {
 
 header {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
 
 }
 
 header img {
     margin: .75rem;
-    box-shadow: var(--shadow)
-    
+    box-shadow: var(--shadow);
+    max-width: 200px;
 
 }
 
 h1 {
     margin: auto;
     color: white;
+    font-size: 1.6em;
 }
 .hero{
     position: relative;
@@ -168,6 +171,7 @@ nav li {
     background-color: aliceblue;
     border: 1px solid black;
     margin: 1rem;
+    margin-bottom: 2rem;
     border-radius: var(--radius);
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
@@ -207,12 +211,6 @@ nav li {
     footer {
         color: aliceblue;
         background-color: var(--forest);
-    }
-
-@media (max-width: 750px) {
-    h1 {
-        margin: auto;
-        font-size: 1.6em;
     }
 
     /* All hamburger menu things. */
@@ -278,11 +276,12 @@ nav li {
         content: "📍 ";
     }
 
-    .card {
-        margin-bottom: 2rem;
-
+    @media (max-width: 425px) {
+        header img {
+            display: none;
+        }
+        header h1 {
+            margin-top: 2rem;
+            margin-bottom: -3rem;
+        }
     }
-
-
-
-}
