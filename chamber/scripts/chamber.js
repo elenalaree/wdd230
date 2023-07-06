@@ -99,7 +99,7 @@ if (page == "index.html"){
 
 
 const members = document.querySelector('#members');
-const memberList = "https://www.elenalaree.github.io/wdd230/chamber/data/members.json";
+const memberList = "https://github.com/elenalaree/wdd230/blob/main/chamber/data/members.json";
 
 async function memberFetch() {
     try {
