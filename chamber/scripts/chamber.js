@@ -119,10 +119,10 @@ async function memberFetch() {
 
 function printMembers(data){
 	const list = data.members;
-	console.log(list)
+
 	list.forEach(card => {
 		let memberCard = document.createElement('section');
-		memberCard.setAttribute("class", "card")
+		memberCard.setAttribute("class", "mem-card")
         let shopName = document.createElement('h2');
         let storeFront =  document.createElement('img');
         let membershipLvl = document.createElement('h4');
@@ -136,7 +136,7 @@ function printMembers(data){
 		let membership = card.membership;
 		let phoneNumber = card.phonenumber;
 		let website = card.websiteurl;
-		console.log(website)
+
 		shopName.textContent = name;
 		storeFront.setAttribute('src', image);
 		storeFront.setAttribute('alt', `${name} Storefront`);
@@ -150,8 +150,8 @@ function printMembers(data){
 
 		memberCard.appendChild(shopName);
 		memberCard.appendChild(type);
-		memberCard.appendChild(phone);
 		memberCard.appendChild(web);
+		memberCard.appendChild(phone);
 		memberCard.appendChild(membershipLvl);
 		memberCard.appendChild(storeFront);
 
@@ -162,3 +162,29 @@ function printMembers(data){
 if (page == "directory.html"){
 	memberFetch();
 	}
+
+
+
+const gridButton = document.querySelector("#grid");
+const listButton = document.querySelector("#list");
+const display = document.querySelector("#members");
+const icon = document.querySelector("#icon");
+const icon2 = document.querySelector("#icon2")
+
+
+gridButton.addEventListener("click", () => {
+	console.log(display.classList)
+	if(display.classList == "list"){
+		display.classList.add("grid");
+		display.classList.remove("list");
+		icon.classList.add("fa-table-list")
+		icon.classList.remove("fa-grip-vertical");
+		icon2.classList.remove("fa-grip-vertical");
+	} else {
+		display.classList.add("list");
+		display.classList.remove("grid");
+		icon.classList.remove("fa-table-list")
+		icon.classList.add("fa-grip-vertical");
+		icon2.classList.add("fa-grip-vertical");
+	}
+});

@@ -45,9 +45,10 @@ h1 {
 }
 
 .hero {
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 100%;
+    background-repeat: repeat;
+    background-size: cover;
+    margin: auto;
+    height:100%;
 }
 
 .card {
@@ -281,3 +282,70 @@ label {
 }
 
 
+/* MEMBER SECTION */
+.menu-options button {
+    min-width: 4rem;
+    width: 10%;
+    margin-top: 1rem;
+    border-color: var(--accent2);
+    height: 3rem;
+    background: var(--accent);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns:  repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+    padding-bottom: 2rem;
+    width: 100vw;
+}
+
+.mem-card{
+    padding: .5rem;
+    background-color: white;
+    border: 1px solid black;
+    margin: auto;
+    border-radius: 7px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.mem-card a {
+    color:var(--accent2)
+}
+
+.mem-card img {
+    width: 100%;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0;
+
+}
+
+.list section {
+    box-shadow: none;
+    border-radius: 0;
+    height: 6rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-direction: column;
+    grid-template-columns: 2fr 1fr 1fr;
+    width: 100%;
+}
+.list section h2{
+    font-size: 1.2em;
+}
+.list section > * {
+    margin: 0 1rem;
+}
+.list section:nth-child(even) {
+	background-color: #e5feff;
+}
+
+.list section img {
+    display: none;
+}

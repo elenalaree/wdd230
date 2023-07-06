@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/larger.css">
     <link rel="icon" href="favicon-shield.ico">
+    <script src="https://kit.fontawesome.com/d96d6eac63.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -38,7 +39,10 @@
         </ul>
     </nav>
     <main>
-        <section id="members"></section>
+        <div class="menu-options">
+            <button id="grid"><i id="icon" class="icon fa-solid fa-table-list fa-xl"></i> <i id="icon2" class="fa-solid fa-xl"></i></button>
+        </div>
+        <section id="members" class="list"></section>
 
     </main>
     <footer>
@@ -50,6 +54,7 @@
         <p class="modify">Last Modified: <span id="lastModified"></span></p>
     </footer>
     <script src="./scripts/chamber.js"></script>
+    
 </body>
 
 </html>

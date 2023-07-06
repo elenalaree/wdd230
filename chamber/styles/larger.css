@@ -82,5 +82,20 @@
         border: 2px solid var(--accent);
     }
 
+    /* DIRECTORY */
+    .menu-options button {
+        width: 20%;
+    }
+
+    .grid {
+        grid-template-columns:  repeat(auto-fit, minmax(460px, 1fr));
+    }
+
+    .mem-card{
+        padding: 2rem;
+    }
+    .list section h2{
+        font-size: 1.5em;
+    }
 
 }
