@@ -61,6 +61,7 @@
         width: 70%;
         margin: auto;
     }
+    
 
 
     /* Discovery */
@@ -94,8 +95,9 @@
     .mem-card{
         padding: 2rem;
     }
-    .list section h2{
-        font-size: 1.5em;
+    
+    .list section {
+        flex-direction: row;
     }
 
 }
