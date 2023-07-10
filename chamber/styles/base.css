@@ -129,6 +129,10 @@ h1 {
     border-radius: 7px;
 }
 
+.house-cup ul li{
+    list-style: none;
+}
+
 .sponsor a {
     color: var(--accent2)
 }
