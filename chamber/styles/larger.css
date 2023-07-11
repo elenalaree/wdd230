@@ -79,7 +79,7 @@
     }
     
     .pics img:hover {
-        border-radius: 7px;
+        
         border: 2px solid var(--accent);
     }
 
